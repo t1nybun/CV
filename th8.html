@@ -1,85 +1,193 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Cá Nhân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            text-align: center;
-        }
-        .header img {
-            width: 120px;
-            border-radius: 50%;
-        }
-        h1 {
-            margin: 10px 0 5px;
-        }
-        .section {
-            margin-top: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .info {
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Nguyễn Chí Khang</title>
+  <style>
+    /* Reset cơ bản */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #74ebd5, #acb6e5);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: #fff;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+    .header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 30px;
+      position: relative;
+    }
+    .header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .header img:hover {
+      transform: scale(1.05);
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .header .info {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-links a {
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #3498db;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+    }
+    .social-links a:hover {
+      background: #2980b9;
+    }
+    .content {
+      padding: 30px 40px 40px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      border-left: 6px solid #3498db;
+      padding-left: 15px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    ul {
+      padding-left: 25px;
+      list-style-type: disc;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      .content {
+        padding: 20px 20px 30px;
+      }
+      .section h2 {
+        font-size: 1.4rem;
+        padding-left: 10px;
+      }
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<div class="container">
+  <div class="container">
     <div class="header">
-        <img src="avatar.jpg" alt="Ảnh đại diện">
-        <h1>Nguyễn Chí Khang</h1>
-        <p class="info">Email: popbunnguyen35@gmail.com | SĐT: 0906767057</p>
+      <img src="avatar.jpg" alt="Ảnh đại diện" />
+      <h1>Nguyễn Chí Khang</h1>
+      <p class="info">📧 popbunnguyen35@gmail.com | 📱 0906767057</p>
+
+      <div class="social-links">
+        <a href="#" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <!-- Icon GitHub dạng SVG -->
+          <svg height="20" width="20" fill="white" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.007-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.61 7.61 0 0 1 2.01-.27c.68.003 1.36.092 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+          </svg>
+        </a>
+        <a href="#" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" style="background:#3b5998;">
+          <!-- Icon Facebook dạng SVG -->
+          <svg height="20" width="20" fill="white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M22.675 0h-21.35C.592 0 0 .593 0 1.326v21.348C0 23.408.592 24 1.326 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.588l-.467 3.622h-3.121V24h6.116c.73 0 1.324-.592 1.324-1.326V1.326C24 .593 23.408 0 22.675 0z"></path>
+          </svg>
+        </a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="background:#0077B5;">
+          <!-- Icon LinkedIn dạng SVG -->
+          <svg height="20" width="20" fill="white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.037-1.849-3.037-1.851 0-2.134 1.445-2.134 2.939v5.667H9.357V9h3.414v1.561h.047c.476-.9 1.635-1.85 3.367-1.85 3.601 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.146.926-2.073 2.07-2.073 1.146 0 2.073.927 2.073 2.073 0 1.142-.927 2.07-2.073 2.07zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .77 0 1.722v20.555C0 23.23.792 24 1.771 24h20.451C23.2 24 24 23.23 24 22.278V1.722C24 .77 23.2 0 22.225 0z"></path>
+          </svg>
+        </a>
+      </div>
     </div>
 
-    <div class="section">
+    <div class="content">
+      <section class="section">
         <h2>Giới thiệu</h2>
-        <p>Tôi là một lập trình viên web với đam mê phát triển ứng dụng và học hỏi công nghệ mới.</p>
-    </div>
+        <p>
+          Tôi là một lập trình viên web, yêu thích xây dựng giao diện đẹp và tối ưu trải nghiệm người dùng.
+        </p>
+      </section>
 
-    <div class="section">
+      <section class="section">
         <h2>Kỹ năng</h2>
         <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>ReactJS</li>
-            <li>NodeJS</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>ReactJS</li>
+          <li>NodeJS</li>
         </ul>
-    </div>
+      </section>
 
-    <div class="section">
-        <h2>Kinh nghiệm làm việc</h2>
+      <section class="section">
+        <h2>Kinh nghiệm</h2>
         <ul>
-            <li><strong>Công ty ABC</strong> - Frontend Developer (2022 - nay)</li>
-            <li><strong>Công ty XYZ</strong> - Intern (2021 - 2022)</li>
+          <li><strong>Công ty ABC</strong> - Frontend Developer</li>
+          <li><strong>Công ty XYZ</strong> - Intern</li>
         </ul>
-    </div>
+      </section>
 
-    <div class="section">
+      <section class="section">
         <h2>Học vấn</h2>
         <ul>
-            <li>Đại học Văn Lang</li>
+          <li>Đại học Văn Lang</li>
         </ul>
+      </section>
     </div>
-</div>
-
+  </div>
 </body>
 </html>
